@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/fonts/FiraMono-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/fonts/FiraMono-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/fonts/FiraMono-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/RobotoMono-200.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/RobotoMono-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/RobotoMono-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  /* Smyck Color Scheme https://color.smyck.org */
+  --black: #000000;
+  --gray: #5D5D5D;
+  --darkred: #C75646;
+  --red: #E09690;
+  --darkgreen: #8EB33B;
+  --green: #CDEE69;
+  --darkyellow: #D0B03C;
+  --yellow: #FFE377;
+  --darkblue: #4E90A7;
+  --blue: #9CD9F0;
+  --darkmagenta: #C8A0D1;
+  --magenta: #FBB1F9;
+  --darkcyan: #218693;
+  --cyan: #77DFD8;
+  --lightgray: #B0B0B0;
+  --white: #F7F7F7;
+
+  --bgblack: #222222;
+  --bggray: #333333;
+}
+
+
+pre,
+code {
+  font-family: "Roboto Mono", Menlo, Monaco, "Courier New", monospace;
+}
+
+pre {
+  padding: .5rem;
+  line-height: 1.25;
+  overflow-x: scroll;
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid var(--lightgray);
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+a,
+a:visited {
+  color: var(--darkmagenta);
+  font-weight: 400;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--magenta);
+}
+
+.retro-no-decoration {
+  text-decoration: none;
+}
+
+html {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 32rem) and (max-width: 48rem) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.85;
+}
+
+p,
+.retro-p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+h1,
+.retro-h1,
+h2,
+.retro-h2,
+h3,
+.retro-h3,
+h4,
+.retro-h4 {
+  margin: 1.414rem 0 .5rem;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+h1,
+.retro-h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+  font-weight: 500;
+}
+
+h2,
+.retro-h2 {
+  font-size: 2.827rem;
+}
+
+h3,
+.retro-h3 {
+  font-size: 1.999rem;
+}
+
+h4,
+.retro-h4 {
+  font-size: 1.414rem;
+}
+
+h5,
+.retro-h5 {
+  font-size: 1.121rem;
+}
+
+h6,
+.retro-h6 {
+  font-size: .88rem;
+}
+
+small,
+.retro-small {
+  font-size: .707em;
+}
+
+/* https://github.com/mrmrs/fluidity */
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
+
+html,
+body {
+  background-color: var(--bgblack);
+  min-height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  color: var(--white);
+  font-family: "Roboto Mono";
+  line-height: 1.45;
+  margin: 6rem auto 1rem;
+  max-width: 50rem;
+  padding: .25rem;
+  font-weight: 200;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+pre {
+  background-color: var(--bggray);
+}
+
+blockquote {
+  border-left: 3px solid var(--darkyellow);
+  padding-left: 1rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.box {
+  background-color: var(--bggray);
+  border: 1px solid var(--lightgray);
+  padding: .8rem;
+}
+.box p {
+  margin: 0;
+}
+
+.alert {
+  background-color: var(--bggray);
+  border: 1px solid var(--yellow);
+  color: var(--darkyellow);
+}
+
+.align-right {
+  text-align: right;
+}
